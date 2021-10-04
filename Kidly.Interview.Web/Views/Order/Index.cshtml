@@ -1,0 +1,49 @@
+﻿@model Kidly.Interview.Web.Views.Order.OrderViewModel
+
+<div class="primaryContent">
+    <h1>Order Summary</h1>
+
+    <div>Order Id: @Model.OrderId</div>
+    <div>Date Placed: @Model.DatePlaced</div>
+
+    <h2>Items:</h2>
+    <div class="ordersTableWrapper">
+        <table class="ordersTable">
+            <thead>
+                <tr class="ordersTable-header">
+                    <th class="ordersTable-productPhotoCol">Image</th>
+                    <th>Product name</th>
+                    <th>Product code</th>
+                    <th class="cost">Unit price</th>
+                    <th class="quantity">Quantity</th>
+                    <th class="cost">Line total</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.OrderItems)
+                {
+                    <tr>
+                        <td><img src="@item.ImagePath" width="80" /></td>
+                        <td>@item.ProductName</td>
+                        <td>@item.Sku</td>
+                        <td class="cost">£ @item.Price</td>
+                        <td class="quantity">@item.Quantity</td>
+                        <td></td>
+                    </tr>
+
+                }
+
+            </tbody>
+            <tfoot class="ordersTable-footer">
+                <tr>
+                    <th colspan="5">Shipping fee:</th>
+                    <td class="cost">£ @Model.DeliveryCost</td>
+                </tr>
+                <tr>
+                    <th colspan="5">Order total:</th>
+                    <td class="cost"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIDLY</title>
+    @Styles.Render("~/bundles/styles")
+</head>
+<body>
+    <div class="header">
+        <img class="header-logo" src="/Images/logo.png" width="110" height="27">
+    </div>
+    <div class="main">
+        <div class="navigation">
+            <p class="navigation-item">
+                <a href="#">Shop</a>
+            </p>
+            <p class="navigation-item">
+                @Html.ActionLink("Order History", "Index", "Order")
+            </p>
+            <p class="navigation-item">
+                <a href="#">About Us</a>
+            </p>
+            <p class="navigation-item">
+                <a href="#">Contact</a>
+            </p>
+        </div>
+        
+        @RenderBody()
+
+    </div>
+    <div class="footer">
+        <p class="footer-copyright">&copy; Kidly Limited 2020</p>
+    </div>
+
+    @Scripts.Render("~/bundles/scripts")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,91 @@
+﻿/*******************************************
+* Reset & basics
+*******************************************/
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica, Arial;
+}
+
+h1,
+h2 {
+    margin: 10px 0 20px;
+}
+
+/*******************************************
+* Header
+*******************************************/
+
+.header {
+    padding: 20px;
+    background-color: #eee;
+}
+
+.header-logo {
+    display: block;
+}
+
+/*******************************************
+* Navigation
+*******************************************/
+
+.navigation {
+    padding: 20px;
+    float: left;
+}
+
+.navigation-item a {
+    color: #000066;
+    text-decoration: none;
+}
+
+.navigation-item {
+    padding: 5px;
+    margin: 5px;
+    background-color: #AEAEAE;
+    text-align: center;
+    width: 120px;
+}
+
+/*******************************************
+* Footer
+*******************************************/
+
+.footer {
+    border-top: 1px solid #eee;
+    padding: 20px;
+}
+
+/*******************************************
+* Primary content
+*******************************************/
+.primaryContent {
+    padding: 20px 20px 20px 180px;
+}
+.ordersTableWrapper {
+    margin: 40px;
+}
+
+.ordersTable {
+    width: 100%;
+}
+
+.ordersTable-header {
+    text-align: left;
+}
+
+.ordersTable-productPhotoCol {
+    width: 140px;
+}
+
+.ordersTable-footer {
+    text-align: right;
+}
+
+th.cost,
+td.cost,
+th.quantity,
+td.quantity {
+    text-align: right;
+}
